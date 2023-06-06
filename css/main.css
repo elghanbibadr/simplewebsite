@@ -189,6 +189,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 177px 130px 33px 95px;
+  padding-bottom: 90px !important;
 }
 
 /*------------------------------------------------------------------
@@ -226,7 +227,11 @@ iframe {
   position: relative;
   width: 100%;
   z-index: 1;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  transition: transform 1s ease;
+}
+.wrap-input100:hover{
+  transform: scale(1.09);
 }
 
 .input100 {
@@ -459,4 +464,10 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+
+.googleIcon{
+  height: 16px;
+
 }
