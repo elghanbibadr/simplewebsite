@@ -236,7 +236,7 @@ iframe {
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
-
+  font-weight: 600;
   display: block;
   width: 100%;
   background: #e6e6e6;
@@ -255,6 +255,7 @@ iframe {
   bottom: 0;
   left: 0;
   z-index: -1;
+  font-weight: bold !important;
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
