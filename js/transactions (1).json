@@ -1,0 +1,82 @@
+{
+  "transactions": [
+        {
+            "id": "01",
+            "amount.value": -30,
+            "amount.currency": "EUR",
+            "descriptions.display": "Zapateria Shoes",
+            "booked": "2023-04-05 17:07:33"
+        },
+        {
+            "id": "02",
+            "amount": -4.2,
+            "amount.currency": "EUR",
+            "descriptions.display": "Coffee Fellows",
+            "booked": "2023-04-07 08:57:23"
+        },
+        {
+            "id": "03",
+            "amount": 110.0,
+            "amount.currency": "GBP",
+            "descriptions.display": "O2 Forum Kentish Town",
+            "booked": "2023-04-07 09:27:55"
+        },
+        {
+            "id": "04",
+            "amount.value": 6000,
+            "amount.currency": "JPY",
+            "descriptions.display": "Books Kinokuniya",
+            "booked": "2023-05"
+        },
+        {
+            "id": "05",
+            "amount.value": -346.86,
+            "amount.currency": "SGD",
+            "descriptions.display": "Singapore Airlines",
+            "booked": "2023-04-28 17:25:44"
+        },
+        {
+            "id": "06",
+            "amount.value": -8.99,
+            "amount.currency": "EUR",
+            "descriptions.display": "Disney+",
+            "booked": "2023-04-30 10:52:01"
+        },
+        {
+            "id": "07",
+            "amount.value": -580,
+            "amount.currency": "SGD",
+            "descriptions.display": "Ikea",
+            "booked": "2023-05"
+        },
+        {
+            "id": "08",
+            "amount.value": 10,
+            "amount.currency": "SGD",
+            "descriptions.display": "Banh Mi Vietnamese cuisine",
+            "booked": "2023-05-01 11:30:49"
+        },
+        {
+            "id": "09",
+            "amount.value": 118.03,
+            "amount.currency": "AED",
+            "descriptions.display": "Al Nafoorah at Jumeirah Al Qasr ",
+            "booked": "2023-05-13 21:23:08"
+        },
+        {
+            "id": "10",
+            "amount.value": 62.34,
+            "amount.currency": "USD",
+            "descriptions.display": "Katz's delicatessen",
+            "booked": "2023-05-21 13:39:01"
+        },
+        {
+            "id": "11",
+            "amount.value": 467.86,
+            "amount.currency": "MXN",
+            "descriptions.display": "Mamma Gaia, Acapulco",
+            "booked": "2023-05-27 11:15:02"
+        }
+    ]
+}
+
