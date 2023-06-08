@@ -26,8 +26,12 @@
 <body>
 
 	<div class="limiter">
+		<header>
+			<svg class="box-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="#fefefe" d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/></svg>
+			<img src="https://lh3.googleusercontent.com/a/AAcHTtdHRznCDDIYgSaNDHrelfGpE4r1oj-4p9Pvr9D9WQ=s96-c" alt="">
+		</header>
 		<h1>Transaction List</h1>
-		<div class="container-login100">
+		<div class="container-login100 hidden ">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
@@ -37,10 +41,6 @@
 					<span class="login100-form-title">
 						Member Login
 					</span>
-
-
-
-
 					<div class="wrap-input100 ">
 
 						<span class="symbol-input100">
@@ -68,6 +68,7 @@
 
 				</div>
 			</div>
+
 		</div>
 		<!-- secret content -->
 		<div class="ag-format-container">
@@ -105,14 +106,10 @@
 				</div>
 				<div class="transaction_item">
 						<div class="ag-courses-item_bg"></div>
-						<h2 class="transaction_title">
-							Coffee Fellows
-						</h2>
+						<h2 class="transaction_title">Coffee Fellow</h2>
 						<div class="ag-courses-item_date-box">
 							Amount:
-							<span class="ag-courses-item_date">
-								-30
-							</span>
+							<span class="ag-courses-item_date">-4.2</span>
 						</div>
 
 						<div class="ag-courses-item_date-box">
@@ -290,7 +287,14 @@
 					// User signed in successfully
 					const user = userCredential.user;
 					if (user) {
-						document.querySelector('.wrap-login100').style.display = 'none'
+						// console.log(user)
+						
+						// document.querySelector('header').innerHTML=`
+						// <img src=${user.photoURL} alt=""/>"
+						// `
+						// document.querySelector('.container-login100').style.display = 'none'
+						// document.querySelector('.ag-format-container').style.display="block"
+						// document.querySelector('h1').style.display="block"
 					}
 					console.log('User:', user);
 				})
