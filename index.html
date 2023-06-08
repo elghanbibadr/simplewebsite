@@ -25,6 +25,7 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
+			<h1>hello world</h1>
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
@@ -86,7 +87,7 @@
 	<script type="module" >
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
   // Import the functions you need from the SDKs you need
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js';// TODO: Add SDKs for Firebase products that you want to use
+import { getAuth,signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js';// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -101,8 +102,38 @@ const firebaseConfig = {
 
 // Initialize Firebase
  const app = initializeApp(firebaseConfig);
- console.log(app)
+ console.log(new GoogleAuthProvider)
+
 export  const auth = getAuth(app);
+const googleSigninBtn = document.querySelector('button');
+
+googleSigninBtn.addEventListener('click', () => {
+  const provider = new GoogleAuthProvider();
+
+  signInWithPopup(auth, provider)
+    .then((userCredential) => {
+      // User signed in successfully
+      const user = userCredential.user;
+	  if (user){
+		document.querySelector('.wrap-login100').style.display='none'
+	  }
+      console.log('User:', user);
+    })
+    .catch((error) => {
+      // An error occurred during authentication
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Error:', errorCode, errorMessage);
+    });
+});
+
+
+
+
+
+
+
+
 	</script>
  
 </body>
