@@ -425,9 +425,20 @@ header img{
   z-index: 1;
   margin-bottom: 20px;
 }
-
-
-
+.userProfilContent{
+  position: relative;
+}
+.userProfilCard{
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  height: 100px;
+  text-align: center;
+  position: absolute;
+  
+  right: 18px;
+  top: 50px;
+}
 .input100 {
   font-family: Poppins-Medium;
   font-size: 15px;
