@@ -265,7 +265,7 @@
 	<script type="module">
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
 		// Import the functions you need from the SDKs you need
-		import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js';// TODO: Add SDKs for Firebase products that you want to use
+		import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js';// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
 
 		// Your web app's Firebase configuration
@@ -280,13 +280,17 @@
 
 		// Initialize Firebase
 		const app = initializeApp(firebaseConfig);
-		console.log(new GoogleAuthProvider)
 
 		export const auth = getAuth(app);
 		const googleSigninBtn = document.querySelector(' .googleSignInBtn');
+		const signOutBtn=document.querySelector('.signOutBtn')
+
+		// display userProfilCard when profil image clicked
 		document.querySelector('.userProfilImg').addEventListener('click', () =>{
-			document.querySelector('.userProfilCard').style.display="block"
+			document.querySelector('.userProfilCard').classList.toggle('hidden')
 		})
+    
+		 
 		googleSigninBtn.addEventListener('click', () => {
 			const provider = new GoogleAuthProvider();
 
@@ -300,6 +304,7 @@
 						// document.querySelector('header').innerHTML=`
 						// <img src=${user.photoURL} alt=""/>"
 						// `
+						document.querySelector('.userProfilCard').classList.add('hidden')
 						document.querySelector('.container-login100').style.display = 'none'
 						document.querySelector('.ag-format-container').style.display="block"
 						document.querySelector('h1').style.display="block"
@@ -307,14 +312,32 @@
 						document.querySelector('.userProfilImg').setAttribute('src',user.photoURL )
 						document.querySelector('.userEmail').textContent=user.email
 					}
-					console.log('User:', user);
 				})
 				.catch((error) => {
 					// An error occurred during authentication
 					const errorCode = error.code;
 					const errorMessage = error.message;
-					console.error('Error:', errorCode, errorMessage);
+					alert('Error:', errorCode, errorMessage);
 				});
+
+				// sign out
+				signOutBtn.addEventListener('click', () => {
+					signOut(auth).then(() => {
+      // User signed out successfully
+      console.log('User signed out');
+	  document.querySelector('.container-login100').style.display = 'flex'
+						document.querySelector('.ag-format-container').style.display="none"
+						document.querySelector('h1').style.display="none"
+						document.querySelector('header').style.display="none"
+						
+    })
+    .catch((error) => {
+      // An error occurred during sign-out
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert('Error:', errorCode, errorMessage);
+    });
+});
 		});
 
 
