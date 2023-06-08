@@ -211,17 +211,30 @@ body{
 
 /* cards */
 .ag-format-container {
-  width: 1142px;
-  margin: 0 auto;
+  max-width: 1142px;
+  margin-inline: auto;
+  padding: 10px;
 }
 
 
 body {
   background-color: #000;
 }
-.ag-courses_box {
+
+
+@media screen and (min-width: 600px) {
+  .transactionWrraperContainer{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (min-width: 800px) {
+  .transactionWrraperContainer{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+.transactionWrraperContainer {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(1fr);
   column-gap: 1rem;
   /* display: -webkit-box;
   display: -ms-flexbox;
@@ -232,17 +245,13 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; */
 
-  padding: 50px 0;
+  /* padding: 10px ; */
 }
-.ag-courses_item {
-  /* -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 30px); */
+.transaction_item {
+ 
   height: 300px;
-  /* margin: 0 15px 30px;
-
-  overflow: hidden;
-
-  border-radius: 28px; */
+  border-radius: 28px !important;  
+  overflow: hidden; 
 }
 .ag-courses-item_link {
   display: block;
@@ -307,19 +316,19 @@ body {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+.transaction_item:nth-child(2n) .ag-courses-item_bg {
   background-color: #3ecd5e;
 }
-.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+.transaction_item:nth-child(3n) .ag-courses-item_bg {
   background-color: #e44002;
 }
-.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+.transaction_item:nth-child(4n) .ag-courses-item_bg {
   background-color: #952aff;
 }
-.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+.transaction_item:nth-child(5n) .ag-courses-item_bg {
   background-color: #cd3e94;
 }
-.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+.transaction_item:nth-child(6n) .ag-courses-item_bg {
   background-color: #4c49ea;
 }
 
